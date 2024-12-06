@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coranu Home Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #05121f, #081d94);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; /* Ensure responsiveness */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .search-input {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .search-button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+
+        .auth-buttons .auth-button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00c6ff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .auth-buttons .auth-button:hover {
+            background-color: #007bff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+
+        .transparent-button {
+            background-color: transparent;
+            border: 2px solid #007bff;
+            color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .transparent-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        #sidebar {
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #081d94;
+            color: white;
+        }
+
+
+        /* #blog-modal {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+} */
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .search-bar {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            #sidebar {
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle"><img src="./Ellipse 1.png" alt=""></div>
+            <h1>Coranu</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="auth-buttons">
+            <button class="auth-button">Login</button>
+            <button class="auth-button">Register</button>
+            <button class="auth-button">Add New Blog</button>
+        </div>
+
+        
+        
+    </header>
+
+    <section id="blog1">
+        <h1 id="heading1">Thoughts, Ideas And Stories</h1>
+        <p id="text1">A space where creativity flows, ideas take shape, and stories come to life. Dive in, explore, and connect with insights that inspire and resonate.</p>
+        <hr>
+        <h2 id="heading2">Trending Topics</h2>
+        <center>
+            <button class="transparent-button">Design Thinking</button>
+            <button class="transparent-button">Technology</button>
+            <button class="transparent-button">Web3</button>
+            <button class="transparent-button">Programming</button>
+            <button class="transparent-button">AI</button>
+        </center>
+        <br>
+        <section id="section1">
+            <h1 id="heading3">Powerful Trading Tools and Features for Experienced Investors</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellat suscipit, dolorum temporibus deleniti amet exercitationem laborum quidem perspiciatis dolore dolor adipisci voluptate atque. Numquam doloribus reprehenderit dolorem perferendis eos.</p>
+        </section>
+    </section>
+
+    <div id="sidebar">
+        <h2 style="color: blue;">Blog Topics</h2>
+        <ul>
+            <li>Company</li>
+            <li>Design</li>
+            <li>Technology</li>
+            <li>Crypto</li>
+            <li>Artificial Intelligence</li>
+            <li>Work</li>
+        </ul>
+        <h2 style="color: blue;">Guide and Tools</h2>
+        <ul>
+            <li>Guideline</li>
+            <li>Mentorship</li>
+            <li>Tutorial</li>
+            <li>Training</li>
+            <li>Career</li>
+            <li>Self Care</li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2024 Coranu. All rights reserved.
+    </footer>
+
+    <script type="module" src="firebase.js"></script>
+     <script type="module" src="app.js"></script>
+</body>
+</html>
